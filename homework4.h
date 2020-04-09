@@ -7,6 +7,8 @@
 
 #ifndef HOMEWORK4_H_
 #define HOMEWORK4_H_
+typedef enum {ECEX, ECE2, ECE25, ECE253, ECE2534} diffStates;
+static diffStates currentState = ECEX;
 
 // This function initializes the board by turning off the Watchdog Timer.
 void initBoard();
