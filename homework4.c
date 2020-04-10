@@ -111,7 +111,7 @@ bool charFSM(char rChar)
             currentState = ECE25;   //if it is 5 then the currentState becomes ECE25  which is the next state
         }
         else
-            currentState = ECEX;    //if not then returns to ECEX
+            currentState = ECE2;    //if not then returns to ECE2
     }
     else if (currentState == ECE25) //ECE25 is the next state that occurs
     {
@@ -120,13 +120,13 @@ bool charFSM(char rChar)
             currentState = ECE253;  //if it is 3 then the currentState becomes ECE253  which is the next state
         }
         else
-            currentState = ECEX;    //if not then returns to ECEX
+            currentState = ECE25;   //if not then returns to ECE25
     }
     else if (currentState == ECE253)//ECE253 is the next state that occurs
     {
         if(rChar == '4')            //if the number 4 is written
         {
-            currentState = ECEX;    //if it is 4 then the currentState becomes ECEX  which is the next state since it completed the sequence
+            currentState = ECE253;  //if it is 4 then the currentState becomes ECEX  which is the next state since it completed the sequence
             response = true;        //if the sequence is correct then the response is true and displays
         }
         else
